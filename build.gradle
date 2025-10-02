@@ -1,7 +1,8 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
+apply plugin: 'checkstyle'
 
-eclipse.project.name = 'FillThisIn' 
+eclipse.project.name = '353Project' 
 
 sourceSets {
 	main {
@@ -28,4 +29,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+checkstyle {
+	configFile = file('checkstyle_checks.xml')
+	toolVersion = '10.17.0'
 }
