@@ -4,22 +4,22 @@
           "https://checkstyle.org/dtds/configuration_1_3.dtd">
           
 
+
 <module name="Checker">
 	
-	
-		<module name= "LineLength">
+	<module name= "LineLength">
 	<property name="max" value="100"/>
 	<property name="ignorePattern" value="package|^import"/>
-	</module>
+</module>
 
-
+	
   <module name="SuppressWarningsFilter"/>
 
   <property name="charset" value="UTF-8"/>
 
   <property name="severity" value="warning"/>
 
-  <property name="fileExtensions" value="java, properties, xml"/>
+  <property name="fileExtensions" value="java"/>
   <!-- Excludes all 'module-info.java' files              -->
   <!-- See https://checkstyle.org/filefilters/index.html -->
   <module name="BeforeExecutionExclusionFileFilter">
@@ -37,11 +37,9 @@
     <module name="IllegalTokenText">
       <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
       <property name="format"
-               value="\\u00(09|0(a|A)|0(c|C)|0(d|D)|22|27
-               |5(C|c))|\\(0(10|11|12|14|15|42|47)|134)"/>
+               value="\\u00(09|0(a|A)|0(c|C)|0(d|D)|22|27|5(C|c))|\\(0(10|11|12|14|15|42|47)|134)"/>
       <property name="message"
-               value="Consider using special escape sequence instead of
-                octal value or Unicode escaped value."/>
+               value="Consider using special escape sequence instead of octal value or Unicode escaped value."/>
     </module>
     <module name="AvoidEscapedUnicodeCharacters">
       <property name="allowEscapesForControlCharacters" value="true"/>
@@ -56,13 +54,11 @@
     <module name="EmptyBlock">
       <property name="option" value="TEXT"/>
       <property name="tokens"
-               value="LITERAL_TRY, LITERAL_FINALLY, 
-               LITERAL_IF, LITERAL_ELSE, LITERAL_SWITCH"/>
+               value="LITERAL_TRY, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE, LITERAL_SWITCH"/>
     </module>
     <module name="NeedBraces">
       <property name="tokens"
-               value="LITERAL_DO, LITERAL_ELSE, 
-               LITERAL_FOR, LITERAL_IF, LITERAL_WHILE"/>
+               value="LITERAL_DO, LITERAL_ELSE, LITERAL_FOR, LITERAL_IF, LITERAL_WHILE"/>
     </module>
     <module name="LeftCurly">
       <property name="tokens"
@@ -75,8 +71,7 @@
     <module name="RightCurly">
       <property name="id" value="RightCurlySame"/>
       <property name="tokens"
-               value="LITERAL_TRY, LITERAL_CATCH, 
-               LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE,
+               value="LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY, LITERAL_IF, LITERAL_ELSE,
                     LITERAL_DO"/>
     </module>
     <module name="RightCurly">
