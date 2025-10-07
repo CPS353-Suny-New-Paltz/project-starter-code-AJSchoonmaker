@@ -129,7 +129,8 @@ public class TestStatusCheckPR {
 
     // parse commit date from the json
     private Date getCommitDate(JsonElement c1) throws ParseException {
-        return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(c1.getAsJsonObject().get("commit").getAsJsonObject().get("committer").getAsJsonObject().get("date").getAsString());
+        return new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+            .parse(c1.getAsJsonObject().get("commit").getAsJsonObject().get("committer").getAsJsonObject().get("date").getAsString());
     }
 
     // parse check names and results from the json
